@@ -5,9 +5,9 @@ export default async function Dashboard() {
     return (
         <div>
             <h1>Dashboard</h1>
-            {lista.map(lista => {
+            {lista?.map((lista, index) => {
                 return(
-                 <div>
+                 <div key={index}>
                  <p>{lista.nome}</p>
                  <p>{lista.email}</p>
                  <p>{lista.password}</p>
