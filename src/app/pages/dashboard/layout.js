@@ -13,6 +13,9 @@ export default function DashboardLayout({ children }){
         <body>
             <div>
                 <h1>Nav</h1>
+                <Link href={"/pages/dashboard"}>Home</Link>
+                <Link href={"/pages/dashboard/alter"}>Alterar</Link>
+                <Link href={"/pages/dashboard/register"}>Registrar</Link>
                 <div>{children}</div>
             </div>
         </body>
