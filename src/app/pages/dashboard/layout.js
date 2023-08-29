@@ -9,6 +9,13 @@ export const metadata = {
 }
 
 export default function DashboardLayout({ children }){
+    const { push } = useRouter();
+
+    const logout = (e) => {
+        e.preventDefault();
+        Cookies.remove('token');
+        push('/');
+    }
     return(
         <body>
             <div>
@@ -16,6 +23,7 @@ export default function DashboardLayout({ children }){
                 <Link href={"/pages/dashboard"}>Home</Link>
                 <Link href={"/pages/dashboard/alter"}>Alterar</Link>
                 <Link href={"/pages/dashboard/register"}>Registrar</Link>
+                <button onClick={logout}>Sair</button>
                 <div>{children}</div>
             </div>
         </body>
