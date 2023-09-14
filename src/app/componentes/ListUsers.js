@@ -2,12 +2,13 @@
 export default async function ListUsers({lista}) {
     await new Promise((resolve) => setTimeout(resolve, 3000))
     return(
-        <div>
+        <div className="grid grid-cols-">
             
                 {lista?.map((lista, index) =>
-                <p key={index}>
+                <div className="grid grid-cols-2" key={index}>
                     {lista.name}
-                </p>
+                    {lista.email}
+                </div>
                 )}
            
         </div>
