@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
+import { Flower2 } from "lucide-react";
 
 export const metadata = {
     title: 'Register users',
@@ -19,9 +20,9 @@ export default function DashboardLayout({ children }){
     return(
         <body>
             <div>
-            <nav class="flex items-center justify-between bg-gray-900 text-white p-4">
+            <nav class="flex items-center justify-between bg-amber-300 text-white p-4">
   <div class="flex items-center">
-    <a href="#" class="text-xl font-bold">Logo</a>
+  <Flower2 size={48} color="#ffffff" strokeWidth={1.25} />
   </div>
   <div class="flex">
   <Link href={"/pages/dashboard"} className="mr-4">Home</Link>

@@ -17,7 +17,7 @@ export default function Register(){
 
   return(
     <div className="grid grid-cols-1 place-items-center mt-20">
-    <div className="border border-amber-200 p-10">
+    <div className="border border-amber-200 p-10 bg-zinc-100 rounded">
     <center><UserCircle2 size={48} color="#ebc400" strokeWidth={0.5} /><br/>
     </center>
     <center><h1 className="text-2xl text-amber-300 hover:text-amber-400">Registrar Usuário</h1><br/></center>

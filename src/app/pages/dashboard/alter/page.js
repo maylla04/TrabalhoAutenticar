@@ -16,7 +16,7 @@ export default function Alter(){
   } 
   return(
     <div className="grid grid-cols-1 place-items-center mt-20">
-    <div className="border border-amber-200 p-10 rounded">
+    <div className="border border-amber-200 p-10 rounded bg-zinc-100">
     <center><UserCircle2 size={48} color="#ebc400" strokeWidth={0.5} /><br/>
     </center>
     <center><h1 className="text-2xl text-amber-300 hover:text-amber-400">Alterar Usuário</h1><br/></center>
