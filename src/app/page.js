@@ -55,7 +55,9 @@ export default function Login() {
         >Esqueci minha senha
         </Link></button></center>
         </div>
-      </form>
+      </form><br/>
+      <h1 className="text-white">//Email: marcelino.passos@gmail.com<br/>
+      //Senha: marcelino123</h1>
       <ToastContainer/>
       </div></div>
   )
