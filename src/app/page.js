@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { UserCircle2 } from "lucide-react";
+import Link from "next/link";
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -27,10 +28,10 @@ export default function Login() {
   }
   return (
     <div className="grid grid-cols-1 place-items-center mt-20">
-      <div className="border border-amber-200 p-10">
-      <center><UserCircle2 size={48} color="#ebc400" strokeWidth={0.5} /><br/>
+      <div className="border border-amber-200 p-10 bg-yellow-400 rounded">
+      <center><UserCircle2 size={48} color="white" strokeWidth={1} /><br/>
       </center>
-      <center><h1 className="text-2xl text-amber-300 hover:text-amber-400">Login</h1><br/></center>
+      <center><h1 className="text-2xl text-white">FAÇA LOGIN</h1><br/></center>
       
       <form onSubmit={handlerLogin}>
         <input
@@ -47,9 +48,12 @@ export default function Login() {
         </input><br/>
         <div className="grid grid-cols-1">
         <button
-        className="border p-5 border-amber-200  mt-10  hover:bg-amber-200"
+        className="border border-white p-5 border-amber-200 bg-yellow-300  mt-10  hover:bg-amber-200 text-white text-xl"
         >Entrar
-        </button>
+        </button><br/>
+        <center><button><Link href={''} className="text-white text-xl font-bold"
+        >Esqueci minha senha
+        </Link></button></center>
         </div>
       </form>
       <ToastContainer/>
