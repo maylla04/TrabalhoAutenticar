@@ -51,7 +51,7 @@ export default function Login() {
         className="border border-white p-5 border-amber-200 bg-yellow-300  mt-10  hover:bg-amber-200 text-white text-xl"
         >Entrar
         </button><br/>
-        <center><button><Link href={''} className="text-white text-xl font-bold"
+        <center><button><Link href={'/page'} className="text-white text-xl font-bold"
         >Esqueci minha senha
         </Link></button></center>
         </div>
