@@ -4,10 +4,7 @@ import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { Flower2 } from "lucide-react";
 
-export const metadata = {
-    title: 'Register users',
-    description: 'Registrando usuarios'
-}
+
 
 export default function DashboardLayout({ children }){
     const { push } = useRouter();
