@@ -12,15 +12,15 @@ export default function Register(){
 
   const handlerRegister = async (e) => {
     e.preventDefault();
-    toast.success('o dia esta lindo')
+    toast.success('Usuário Registrado com Sucesso')
   }
 
   return(
     <div className="grid grid-cols-1 place-items-center mt-20">
-    <div className="border border-amber-200 p-10 bg-zinc-100 rounded">
-    <center><UserCircle2 size={48} color="#ebc400" strokeWidth={0.5} /><br/>
+    <div className="border border-amber-200 p-10 bg-yellow-400 rounded">
+    <center><UserCircle2 size={48} color="white" strokeWidth={1} /><br/>
     </center>
-    <center><h1 className="text-2xl text-amber-300 hover:text-amber-400">Registrar Usuário</h1><br/></center>
+    <center><h1 className="text-2xl text-white">Registrar Usuário</h1><br/></center>
     
     <form onSubmit={handlerRegister}>
       <input
@@ -37,8 +37,8 @@ export default function Register(){
       </input><br/>
       <div className="grid grid-cols-1">
       <button
-      className="border p-5 border-amber-200  mt-10  hover:bg-amber-200"
-      >Entrar
+      className="border border-white p-5 border-amber-200 bg-yellow-300  mt-10  hover:bg-amber-200 text-white text-xl"
+      >Registrar
       </button>
       </div>
     </form>

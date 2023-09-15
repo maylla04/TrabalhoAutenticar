@@ -12,14 +12,14 @@ export default function Alter(){
 
   const handlerAlter = async (e) => {
     e.preventDefault();
-    toast.success('o dia esta lindo')
+    toast.success('Alterado com Sucesso!')
   } 
   return(
     <div className="grid grid-cols-1 place-items-center mt-20">
-    <div className="border border-amber-200 p-10 rounded bg-zinc-100">
-    <center><UserCircle2 size={48} color="#ebc400" strokeWidth={0.5} /><br/>
+    <div className="border border-amber-200 p-10 bg-yellow-400">
+    <center><UserCircle2 size={48} color="white" strokeWidth={1} /><br/>
     </center>
-    <center><h1 className="text-2xl text-amber-300 hover:text-amber-400">Alterar Usuário</h1><br/></center>
+    <center><h1 className="text-2xl text-white">Alterar Usuário</h1><br/></center>
     
     <form onSubmit={handlerAlter}>
       <input
@@ -36,8 +36,8 @@ export default function Alter(){
       </input><br/>
       <div className="grid grid-cols-1">
       <button
-      className="border p-5 border-amber-200  mt-10  hover:bg-amber-200"
-      >Entrar
+      className="border border-white p-5 border-amber-200 bg-yellow-300  mt-10  hover:bg-amber-200 text-white text-xl"
+      >Alterar
       </button>
       </div>
     </form>
