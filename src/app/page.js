@@ -56,7 +56,7 @@ export default function Login() {
         </Link></button></center>
         </div>
       </form><br/>
-      <h1 className="text-white">//Email: marcelino.passos@gmail.com<br/>
+      <h1 className="text-white">//Email: marcelino.passos<br/>
       //Senha: marcelino123</h1>
       <ToastContainer/>
       </div></div>
