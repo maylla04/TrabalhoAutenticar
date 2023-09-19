@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import handlerAcessUser from "./functions/handlerAcess"
+import handlerAcessUser from "./functions/handlerAcess" //chamando a função de acesso
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,16 +12,16 @@ export default function Login() {
     email: '',
     password: '',
   });
-  const { push } = useRouter();
+  const { push } = useRouter(); // utilizar a função push, que redireciona o usuario para a pagina dash
 
   const handlerLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //previnindo o envio do formulário
     try {
-      const userAuth = await handlerAcessUser(user);
+      const userAuth = await handlerAcessUser(user); //utilizando a função
       if(userAuth.token === undefined){
         toast.error("Error no Email ou senha!")
       }
-      push('/pages/dashboard');
+      push('/pages/dashboard'); //usa o push aq
     } catch {
       toast.error("Erro na Aplicação");
     }
@@ -60,5 +60,6 @@ export default function Login() {
       //Senha: marcelino123</h1>
       <ToastContainer/>
       </div></div>
+      //toastcontainer, tipo um alert
   )
 }

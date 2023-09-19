@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 export default async function ListUsers({lista}) {
-    await new Promise((resolve) => setTimeout(resolve, 3000))
+    await new Promise((resolve) => setTimeout(resolve, 3000)) //tempo para resposta
     return(
         <div className="grid p-20">
                 <div className="grid grid-cols-3 p-6 bg-amber-400 border-b border-yellow-200">

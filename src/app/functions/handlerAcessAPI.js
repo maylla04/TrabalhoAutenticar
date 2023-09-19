@@ -32,10 +32,11 @@ const lista = [
     token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
 }
 ]
-const getUserAuthenticated = (user) => {
+const getUserAuthenticated = (user) => { //usuario authenticado
     let userAut = {}
       lista.map((usuario)=> {
         if(user.email === usuario.email && user.password === usuario.password){
+            //se o email e a senha digitada forem iguais a alguma da lista
             userAut = usuario
         }
       })
@@ -43,6 +44,6 @@ const getUserAuthenticated = (user) => {
 }
 
 const getUsers = () =>{
-       return lista 
+       return lista //retorna usuarios
 }
 export { getUsers, getUserAuthenticated };
