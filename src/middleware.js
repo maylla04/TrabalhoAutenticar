@@ -2,12 +2,12 @@
 import { NextResponse } from "next/server";
 import { validateToken } from "./app/functions/validateToken";
 
-export const middleware = (request) => {
+export const middleware = async (request) => {
 
     const token = request.cookies.get('token')?.value; //pegando cookie com nome de token
     const urlLogin = new URL('/', request.url); //acessa a rota do login
     const urlDash = new URL('/pages/dashboard', request.url); //rota da dash
-    const isTokenValidated = validateToken(token);
+    const isTokenValidated = await validateToken(token);
 
     if (!isTokenValidated || !token) {
         //se o token não estiver validade OU não tiver um token

@@ -5,6 +5,7 @@ const getUserAuthenticated = async (user) => { //usuario authenticado
    const responseOfApi = await fetch(url + "/user/authenticated",
         {
             method: "POST",
+            cache: "no-cache",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(user)
     }
@@ -13,8 +14,8 @@ const getUserAuthenticated = async (user) => { //usuario authenticado
    return userAuth;
 }
 
-const getUsers = async () =>{
-    const responseOfApi = await fetch(url + "/users");
+const getUsers = async (user) =>{
+    const responseOfApi = await fetch(url + "/users", {cache: "no-cache"});
    const lista = await responseOfApi.json();
    return lista;
 }

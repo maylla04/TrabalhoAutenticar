@@ -3,7 +3,7 @@ import { getUsers } from "@/app/functions/handlerAcessAPI";
 import { Suspense } from "react"
 
 export default async function Dashboard() {
-   const lista = getUsers()
+   const lista = await getUsers()
     return (
         <div className="">
             <Suspense fallback={

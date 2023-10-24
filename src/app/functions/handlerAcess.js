@@ -6,7 +6,7 @@ const handlerAcessUser = async (user) => {
 
     const userAuth = await getUserAuthenticated(user); //constante usuario authenticate
     
-    const isTokenValidate = validateToken(userAuth.token); //token validado
+    const isTokenValidate = await validateToken(userAuth.token); //token validado
 
     
     if (isTokenValidate) {
