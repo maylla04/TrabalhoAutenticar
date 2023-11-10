@@ -1,18 +1,33 @@
 'use client'
 import { useState } from "react";
+import { postUser } from "@/app/functions/handlerAcessAPI";
 import { ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { UserCircle2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Register(){
   const [user, setUser] = useState({
+    name: '',
     email: '',
     password: '',
   });
 
+const { push } = useRouter();
+
   const handlerRegister = async (e) => {
     e.preventDefault();
-    toast.success('Usuário Registrado com Sucesso')
+    try{
+      await postUser(user);
+      await new Promise((resolve) => {
+        toast.success("Usuário Registrado com Sucesso");
+        setTimeout(resolve, 5000)
+      });
+      return push("/pages/dashboard");
+    } catch {
+      return toast.error("Erro")
+    }
+    
   }
 
   return(
