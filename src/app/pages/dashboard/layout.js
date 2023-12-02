@@ -17,13 +17,12 @@ export default function DashboardLayout({ children }){
     return(
         <body>
             <div>
-            <nav class="flex items-center justify-between bg-amber-300 text-white p-4">
+            <nav class="flex items-center justify-between bg-zinc-500 text-white p-4 border-b border-zinc-400">
   <div class="flex items-center">
   <Flower2 size={48} color="#ffffff" strokeWidth={1.25} />
   </div>
   <div class="flex">
   <Link href={"/pages/dashboard"} className="mr-4">Home</Link>
-                <Link href={"/pages/dashboard/alter" } className="mr-4">Alterar</Link>
                 <Link href={"/pages/dashboard/register"} className="mr-4">Registrar</Link>
                 <button onClick={logout}>Sair</button>
   </div>
